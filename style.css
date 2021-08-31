@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -11,6 +12,9 @@ html {
 
 a {
   text-decoration: none;
+  list-style: none;
+  color: inherit;
+  display: block;
 }
 
 img {
@@ -28,6 +32,51 @@ body {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 21rem;
+  background-color: white;
+  z-index: 99;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateX(100%);
+  transition: transform 0.2s linear;
+  will-change: transform;
+}
+.menu.is-active {
+  transform: translateX(0);
+}
+.menu__close {
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.menu__list {
+  list-style: none;
+  height: 100%;
+  padding: 5rem 2rem 2rem;
+}
+.menu__list-item {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.menu__link {
+  display: block;
+  padding: 1.5rem;
+  text-transform: capitalize;
+  color: #1a2b5f;
+  border-radius: 6px;
+  transition: all 0.15s linear;
+}
+.menu__link:hover {
+  color: #c6cad7;
+  background-color: #ffc87a;
 }
 
 .container {
@@ -67,6 +116,9 @@ body {
 }
 .header__menu-link:hover {
   color: #ffc87a;
+}
+.header__menu-icon {
+  display: none;
 }
 
 .logo {
@@ -319,7 +371,7 @@ body {
   text-align: center;
 }
 .partner__title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 7rem;
   padding-bottom: 7rem;
@@ -331,6 +383,12 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row;
+}
+.partner__item {
+  transition: opacity 0.2s linear;
+}
+.partner__item:hover {
+  opacity: 0.5;
 }
 
 .connect {
@@ -411,6 +469,9 @@ body {
   cursor: pointer;
   font-size: 1.4rem;
   color: #1a2b5f;
+  border-left: 1px solid;
+  padding-left: 7px;
+  border-color: #1a2b5f;
 }
 .subscribe__social i {
   margin: 0 2rem;
@@ -507,6 +568,13 @@ body {
   .header__menu {
     display: none;
   }
+  .header__menu-icon {
+    display: block;
+    padding-right: 1.8rem;
+    color: inherit;
+    cursor: pointer;
+    font-size: 2rem;
+  }
 
   .category__item {
     width: calc(100% - 22.5px);
@@ -578,7 +646,6 @@ body {
   .subscribe__social {
     margin: 0 auoto;
   }
-
   .footer__conatiner {
     flex-wrap: wrap;
   }

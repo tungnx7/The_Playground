@@ -18,6 +18,23 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="menu">
+        <i class="fas fa-times menu__close"></i>
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a href="#login" class="menu__link">Login</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#events" class="menu__link">Events</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#pricing" class="menu__link">Pricing</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#blog" class="menu__link">Blog</a>
+          </li>
+        </ul>
+      </div>
       <header class="header">
         <div class="container header__inner">
           <a href="index.html" class="logo">
@@ -26,17 +43,17 @@
           <nav class="header__menu">
             <ul class="header__menu-list">
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link"> Events </a>
+                <a href="#events" class="header__menu-link"> Events </a>
               </li>
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link"> Pricing </a>
+                <a href="#pricing" class="header__menu-link"> Pricing </a>
               </li>
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link"> Blog </a>
+                <a href="#blog" class="header__menu-link"> Blog </a>
               </li>
               <li class="header__menu-item">
                 <a
-                  href="#"
+                  href="login"
                   class="header__menu-link btn btn--border btn--rounded"
                 >
                   Login
@@ -44,6 +61,9 @@
               </li>
             </ul>
           </nav>
+          <a class="header__menu-icon">
+            <i class="fas fa-bars menu-toggle"></i>
+          </a>
         </div>
       </header>
       <section class="banner">
@@ -95,15 +115,17 @@
           </ul>
         </div>
       </section>
-      <section class="feature">
+      <section class="feature" id="events">
         <div class="container">
           <div class="feature__item">
             <div class="feature__image">
               <img src="./images/img5.png" alt="" />
             </div>
             <div class="feature__info">
-              <h3 class="feature__title">
-                The outdoor environment is age-appropriate to play
+              <h3>
+                <a href="" class="feature__title"
+                  >The outdoor environment is age-appropriate to play</a
+                >
               </h3>
               <p class="feature__desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At
@@ -112,15 +134,21 @@
                 ullam dignissimos reiciendis adipisci provident mollitia!
               </p>
               <ul class="feature-intro__list">
-                <li class="feature-intro__item">
-                  The Playground has been designed to feature a first responders
-                  theme
+                <li>
+                  <a href="" class="feature-intro__item"
+                    >The Playground has been designed to feature a first
+                    responders theme</a
+                  >
                 </li>
-                <li class="feature-intro__item">
-                  Fully-inclusive playground offers rich experiences
+                <li>
+                  <a href="" class="feature-intro__item">
+                    Fully-inclusive playground offers rich experiences
+                  </a>
                 </li>
-                <li class="feature-intro__item">
-                  The projects is set to open Spring 2021
+                <li>
+                  <a href="" class="feature-intro__item">
+                    The projects is set to open Spring 2021
+                  </a>
                 </li>
               </ul>
               <a href="#" class="btn btn--primary btn--rounded">Visit Now</a>
@@ -131,7 +159,9 @@
               <img src="./images/img6.png" alt="" />
             </div>
             <div class="feature__info">
-              <h3 class="feature__title">The best Aquapark for kids</h3>
+              <h3>
+                <a href="" class="feature__title">The best Aquapark for kids</a>
+              </h3>
               <p class="feature__desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                 voluptas ut quidem eligendi molestiae aspernatur, architecto,
@@ -140,16 +170,16 @@
               </p>
               <ul class="feature-intro__list">
                 <li class="feature-intro__item feature-intro__item--circle">
-                  The Fire Trick with Free Food
+                  <a href=""> The Fire Trick with Free Food </a>
                 </li>
                 <li class="feature-intro__item feature-intro__item--circle">
-                  The Police Car with Costume
+                  <a href=""> The Police Car with Costume </a>
                 </li>
                 <li class="feature-intro__item feature-intro__item--circle">
-                  The Roller Coaster with Safety
+                  <a href=""> The Roller Coaster with Safety </a>
                 </li>
                 <li class="feature-intro__item feature-intro__item--circle">
-                  The Best Entertaing Events
+                  <a href=""> The Best Entertaing Events </a>
                 </li>
               </ul>
             </div>
@@ -159,7 +189,9 @@
               <img src="./images/img7.png" alt="" />
             </div>
             <div class="feature__info">
-              <h3 class="feature__title">Why we the best</h3>
+              <h3>
+                <a href="" class="feature__title">Why we the best</a>
+              </h3>
               <p class="feature__desc text-clamp text-clamp--2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                 voluptas ut quidem eligendi molestiae aspernatur, architecto,
@@ -176,7 +208,7 @@
                     "
                   ></i>
                   <h4 class="feature-best__title">
-                    Non profitable Organization
+                    <a href=""> Non profitable Organization </a>
                   </h4>
                   <p class="feature-best__desc text-clamp text-clamp--2">
                     Lorem ipsum dolor, sit amet consectetur
@@ -190,7 +222,9 @@
                       feature-best__icon feature-best__icon--yellow
                     "
                   ></i>
-                  <h4 class="feature-best__title">Customer Support</h4>
+                  <h4 class="feature-best__title">
+                    <a href=""> Customer Support </a>
+                  </h4>
                   <p class="feature-best__desc text-clamp text-clamp--2">
                     Lorem ipsum dolor, sit amet consectetur
                   </p>
@@ -203,7 +237,9 @@
                       feature-best__icon feature-best__icon--purple
                     "
                   ></i>
-                  <h4 class="feature-best__title">High Safety & Security</h4>
+                  <h4 class="feature-best__title">
+                    <a href=""> High Safety & Security </a>
+                  </h4>
                   <p class="feature-best__desc text-clamp text-clamp--2">
                     Lorem ipsum dolor, sit amet consectetur
                   </p>
@@ -217,7 +253,7 @@
                     "
                   ></i>
                   <h4 class="feature-best__title">
-                    Well Designed and decorated
+                    <a href=""> Well Designed and decorated </a>
                   </h4>
                   <p class="feature-best__desc text-clamp text-clamp--2">
                     Lorem ipsum dolor, sit amet consectetur
@@ -228,37 +264,45 @@
           </div>
         </div>
       </section>
-      <section class="partner">
+      <section class="partner" id="pricing">
         <div class="container partner__container">
           <h2 class="partner__title">Our business partners</h2>
           <ul class="partner__list">
             <li class="partner__item">
-              <img
-                src="./images/logo-amazon.png"
-                alt=""
-                class="partner__logo"
-              />
+              <a href="">
+                <img
+                  src="./images/logo-amazon.png"
+                  alt=""
+                  class="partner__logo"
+                />
+              </a>
             </li>
             <li class="partner__item">
-              <img
-                src="./images/logo-netflix.png"
-                alt=""
-                class="partner__logo"
-              />
+              <a href="">
+                <img
+                  src="./images/logo-netflix.png"
+                  alt=""
+                  class="partner__logo"
+                />
+              </a>
             </li>
             <li class="partner__item">
-              <img
-                src="./images/logo-newyork.png"
-                alt=""
-                class="partner__logo"
-              />
+              <a href="">
+                <img
+                  src="./images/logo-newyork.png"
+                  alt=""
+                  class="partner__logo"
+                />
+              </a>
             </li>
             <li class="partner__item">
-              <img
-                src="./images/logo-stripe.png"
-                alt=""
-                class="partner__logo"
-              />
+              <a href="">
+                <img
+                  src="./images/logo-stripe.png"
+                  alt=""
+                  class="partner__logo"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -285,7 +329,7 @@
           </ul>
         </div>
       </section>
-      <setion class="subscribe">
+      <setion class="subscribe" id="blog">
         <div class="container subscribe__container">
           <h2 class="subscribe__title">
             Subscribe to our newsletter to get future offres
@@ -336,6 +380,7 @@
           </div>
         </div>
       </footer>
+      <script src="./app.js"></script>
     </div>
   </body>
 </html>

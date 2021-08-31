@@ -4,6 +4,7 @@ $text-gray: #c6cad7;
 html {
   font-size: 62.5%;
   // 1rem = 10px
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -13,6 +14,9 @@ html {
 }
 a {
   text-decoration: none;
+  list-style: none;
+  color: inherit;
+  display: block;
 }
 img {
   display: block;
@@ -45,6 +49,50 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 21rem;
+  background-color: white;
+  z-index: 99;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateX(100%);
+  transition: transform 0.2s linear;
+  will-change: transform;
+  &.is-active {
+    transform: translateX(0);
+  }
+  &__close {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+  &__list {
+    list-style: none;
+    height: 100%;
+    padding: 5rem 2rem 2rem;
+    &-item {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 1.5rem;
+    text-transform: capitalize;
+    color: $text-color;
+    border-radius: 6px;
+    transition: all 0.15s linear;
+    &:hover {
+      color: $text-gray;
+      background-color: $primary-color;
+    }
+  }
+}
 .container {
   margin: 0 auto;
   max-width: 1210px;
@@ -73,6 +121,9 @@ body {
       &:hover {
         color: $primary-color;
       }
+    }
+    &-icon {
+      display: none;
     }
   }
 }
@@ -320,7 +371,7 @@ body {
     text-align: center;
   }
   &__title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 7rem;
     padding-bottom: 7rem;
@@ -328,6 +379,13 @@ body {
   }
   &__list {
     @include flex(center, space-between);
+  }
+  &__item {
+    transition: opacity 0.2s linear; 
+    &:hover {
+      opacity: 0.5;
+    }
+
   }
 }
 .connect {
@@ -396,6 +454,9 @@ body {
     cursor: pointer;
     font-size: 1.4rem;
     color: $text-color;
+    border-left: 1px solid;
+    padding-left: 7px;
+    border-color: $text-color;
   }
   &__social i {
     margin: 0 2rem;
@@ -491,6 +552,13 @@ body {
   .header {
     &__menu {
       display: none;
+      &-icon {
+        display: block;
+        padding-right: 1.8rem;
+        color: inherit;
+        cursor: pointer;
+        font-size: 2rem;
+      }
     }
   }
   .category {
@@ -570,6 +638,8 @@ body {
     &__social {
       margin: 0 auoto;
     }
+    &__button {      
+    }
   }
   .footer {
     &__conatiner {
@@ -591,3 +661,4 @@ body {
     }
   }
 }
+
